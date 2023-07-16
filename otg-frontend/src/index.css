@@ -27,14 +27,19 @@ code {
   background-repeat: repeat;
   background-attachment: scroll;
   background-position: 0% 0%;
-  position: fixed;
+  position: relative;
   bottom: 0pt;
   left: 0pt;
+  margin-top: auto;
 }
 
 #img1{
   margin-right: 750px;
-  margin-left: 60px;
+  margin-left: 40px;
+}
+
+#img3{
+  margin-left: -730px;
 }
 
 #page1{

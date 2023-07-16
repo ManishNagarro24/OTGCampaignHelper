@@ -18,6 +18,13 @@ export default function Header() {
               loading='lazy'
             />
              <img
+              id="img3"
+              src='../Images/header.png'
+              height='50'
+              alt=''
+              loading='lazy'
+            />
+             <img
               id="img2"
               src='../Images/UserLogo.png'
               height='40'
