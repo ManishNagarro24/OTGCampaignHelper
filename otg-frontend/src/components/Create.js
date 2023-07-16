@@ -1,24 +1,50 @@
-import React from 'react'
-import { MDBListGroup, MDBListGroupItem, MDBRipple } from 'mdb-react-ui-kit';
+import React,{ useState,useRef} from 'react';
+import { MDBListGroup,MDBInput,MDBBtn} from 'mdb-react-ui-kit';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 export default function Memory() {
   return (
-    <div id="Page1" className="d-flex p-2 justify-content-center">     
+      <div id="Page1" className="d-flex p-2 justify-content-center" style={{marginTop:"100px",display:"flex"}}>   
+      <MDBListGroup id = "Page1" light>
+        <h4>We're raising</h4>
+      <MDBInput id="Amount" placeholder="50$" style={{height:"80px",width:"500px",marginTop:"10px",marginBottom:"2px"}}/>
+      <label >You can edit your target later.</label>
+      <h4 style={{marginTop:"20px"}}>to</h4>
+      <MDBInput id="CauseDescription" placeholder='help fund a new playground' style={{marginBottom:"2px",height:"100px"}}/>
+      <label>You can edit your page title later.</label>
+      {MyComponent()}
       
-      <MDBListGroup id = "Page1" style={{ minWidth: '22rem' }} light>
-      <h6 style={{marginBottom:"20px",marginTop:"20px"}}>Are you fundraising in memory of someone?</h6>
-      <MDBRipple>
-        <MDBListGroupItem tag='a' href='/' action noBorders aria-current='true' className='px-3'>
-          Yes          
-        </MDBListGroupItem>   
-        <MDBListGroupItem tag='a' href='/' action noBorders aria-current='true' className='px-3'>
-         No    
-        </MDBListGroupItem>  
-      </MDBRipple>
-      
-      <p style={{fontSize:"9px",marginTop:"20px"}}>JustGiving has 0% platform fees for donations. All funds
+      <p style={{fontSize:"9px",marginTop:"40px"}}>JustGiving has 0% platform fees for donations. All funds
       will go direct to the charity.</p> 
     </MDBListGroup>
     </div>
   )
 }
+const MyComponent = () => {
+  const [selectedOption, setSelectedOption] = useState('Choose a category');
+  const inputRef = useRef(null);
+  const handleOptionSelect = (eventKey) => {
+    setSelectedOption(eventKey);
+  };
+  const handleContinue = () => {
+    // Handle the continue button click event
+  };
+
+  return (
+    <div class="Category" style={{marginTop:"20px"}}>
+      <h6>Category</h6>
+      <Dropdown onSelect={handleOptionSelect}>
+      <Dropdown.Toggle variant="primary" id="dropdown-toggle" style={{width:"500px",overflow:"auto"}}>
+        {selectedOption}
+      </Dropdown.Toggle>
+      <Dropdown.Menu >
+        <Dropdown.Item eventKey="Option 1" >Option 1</Dropdown.Item>
+        <Dropdown.Item eventKey="Option 2" >Option 2</Dropdown.Item>
+        <Dropdown.Item eventKey="Option 3" >Option 3</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+    <MDBBtn onClick={handleContinue} style={{marginTop:"70px",width:"250px"}}>Continue</MDBBtn>   
+    </div>
+    
+  );
+};
