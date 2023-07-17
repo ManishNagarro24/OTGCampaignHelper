@@ -22,6 +22,7 @@ export default function Activity() {
       <p style={{fontSize:"9px",marginTop:"20px"}}>JustGiving has 0% platform fees for donations. All funds
       will go direct to the charity.</p> 
     </MDBListGroup>
+    
     </div>
   )
 }
