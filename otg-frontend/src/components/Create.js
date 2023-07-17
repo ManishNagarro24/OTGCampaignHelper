@@ -4,10 +4,13 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 export default function Memory() {
   return (
+    <>
+    <img src="./Images/getstarted.png" alt="" height="180" width="100%"></img>
       <div id="Page1" className="d-flex p-2 justify-content-center" style={{marginTop:"100px",display:"flex"}}>   
-      <MDBListGroup id = "Page1" light>
+      <MDBListGroup id = "Page1" style={{paddingTop:"-100px",marginTop:"-80px"}} light >
         <h4>We're raising</h4>
-      <MDBInput id="Amount" placeholder="50$" style={{height:"80px",width:"500px",marginTop:"10px",marginBottom:"2px"}}/>
+      {/* <MDBInput id="Amount" Placeholder="£ 500" style={{height:"80px",width:"500px",marginTop:"10px",marginBottom:"2px"}}/> */}
+      <img src="./Images/500o.png" alt="" height="80px" width="100%" style={{border: "0.5px solid",borderRadius:"4px",borderColor:"lightgray"}} ></img>
       <label >You can edit your target later.</label>
       <h4 style={{marginTop:"20px"}}>to</h4>
       <MDBInput id="CauseDescription" placeholder='help fund a new playground' style={{marginBottom:"2px",height:"100px"}}/>
@@ -18,6 +21,7 @@ export default function Memory() {
       will go direct to the charity.</p> 
     </MDBListGroup>
     </div>
+    </>
   )
 }
 const MyComponent = () => {
@@ -34,16 +38,16 @@ const MyComponent = () => {
     <div class="Category" style={{marginTop:"20px"}}>
       <h6>Category</h6>
       <Dropdown onSelect={handleOptionSelect}>
-      <Dropdown.Toggle variant="primary" id="dropdown-toggle" style={{width:"500px",overflow:"auto"}}>
+      <Dropdown.Toggle id="dropdown-toggle" style={{width:"500px",overflow:"auto",backgroundColor:"white",color:"grey",textAlign:"left",borderColor:"lightgrey"}}>
         {selectedOption}
       </Dropdown.Toggle>
-      <Dropdown.Menu >
+      <Dropdown.Menu >        
         <Dropdown.Item eventKey="Option 1" >Option 1</Dropdown.Item>
         <Dropdown.Item eventKey="Option 2" >Option 2</Dropdown.Item>
         <Dropdown.Item eventKey="Option 3" >Option 3</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
-    <MDBBtn onClick={handleContinue} style={{marginTop:"70px",width:"250px"}}>Continue</MDBBtn>   
+    <MDBBtn onClick={handleContinue} style={{marginTop:"70px",width:"250px",backgroundColor:"lightskyblue",borderColor:"lightgrey"}}>Continue</MDBBtn>   
     </div>
     
   );

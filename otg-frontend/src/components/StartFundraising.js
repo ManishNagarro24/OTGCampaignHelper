@@ -6,6 +6,7 @@ export default function Fundraising() {
   return (
     <div id="Page1" className="d-flex p-2 justify-content-center">     
       {ImageOverlayComponent()}
+      <img class="image" src="https://www.justgiving.com/prismic/assets/jg-startfundraising-website/static/c8151e11-e94e-4d10-bc99-34997041ea51_revealer-crowdfunding-9ff20cae398598abb6fb45597ddf8580.svg" alt="image 2 alt text" height="600" width="100%"></img>
       
     
     </div>
