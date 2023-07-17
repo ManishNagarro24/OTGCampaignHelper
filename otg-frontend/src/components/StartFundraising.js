@@ -34,6 +34,7 @@ const ImageOverlayComponent = () => {
           height:'300px',
           padding: '48px',
           textAlign: 'center',
+          marginLeft: '650px'
         }}
       >
         <h2 style={{ marginBottom: '40px' }}>What are you raising money for?</h2>
@@ -52,7 +53,7 @@ const ImageOverlayComponent = () => {
           </Link> 
           
         </div>
-        <div style={{ display: 'flex',marginLeft:'50px',marginTop: '10px' }}>
+        <div style={{ display: 'flex',marginLeft:'10px',marginTop: '10px' }}>
           <div style={{color: 'black' }}>
             <p style={{ marginBottom: '5px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', width: '400px' }}>Donations go directly to the charity</p>
             <a href="#" style={{ color: '#1667D9' }}>Find out more!</a>
