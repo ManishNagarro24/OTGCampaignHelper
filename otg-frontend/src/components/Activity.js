@@ -1,9 +1,10 @@
 import React from 'react'
-import { MDBListGroup, MDBListGroupItem, MDBRipple } from 'mdb-react-ui-kit';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { MDBListGroup,MDBInput,MDBBtn} from 'mdb-react-ui-kit';
 
 export default function Activity() {
   return (
-    <div style={{
+        <div style={{
       position: 'relative',
       backgroundImage: './Images/BackGround.png',
       width: '100%',
@@ -13,7 +14,6 @@ export default function Activity() {
       </img>
       <PopupComponent/> 
     </div>
-    
   )
 }
 
@@ -60,6 +60,12 @@ const PopupComponent = () => {
     borderRadius: '4px',
     cursor: 'pointer',
   };
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate('/5'); // Navigate to the "/3" route
+  };
+
 
   return (
     <div style={popupContainerStyle}>
@@ -73,13 +79,7 @@ const PopupComponent = () => {
             <span className="jg-text--brand-small" style={{ opacity: 1 }}>
               1/4
             </span>
-            <button
-              type="button"
-              className="_1HOY9 qa-forward-button ohezf"
-              data-disabled="false"
-            >
-              <span style={{ visibility: 'visible', opacity: 1 }}>Next step</span>
-            </button>
+            <MDBBtn onClick={handleNavigation} style={{marginTop:"70px",width:"250px",backgroundColor:"lightskyblue",borderColor:"lightgrey"}}><span style={{ visibility: 'visible', opacity: 1 }}>Next step</span></MDBBtn>     
           </div>
           <header className="jg-space-mtms jg-space-mbmd jg-text--center" style={{textAlign:'center'}}>
             <h1>Add a cover photo</h1>

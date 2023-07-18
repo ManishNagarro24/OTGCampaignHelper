@@ -1,6 +1,8 @@
 import React,{ useState,useRef} from 'react';
 import { MDBListGroup,MDBInput,MDBBtn} from 'mdb-react-ui-kit';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Memory() {
   return (
@@ -30,8 +32,9 @@ const MyComponent = () => {
   const handleOptionSelect = (eventKey) => {
     setSelectedOption(eventKey);
   };
+  const navigate = useNavigate();
   const handleContinue = () => {
-    // Handle the continue button click event
+    navigate('/3');
   };
 
   return (

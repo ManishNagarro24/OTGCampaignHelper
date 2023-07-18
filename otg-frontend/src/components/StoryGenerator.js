@@ -1,5 +1,6 @@
-import { MDBListGroup, MDBListGroupItem, MDBRipple } from 'mdb-react-ui-kit';
+import { MDBListGroup, MDBListGroupItem, MDBRipple} from 'mdb-react-ui-kit';
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 
 export default function Activity() {
   return (
@@ -68,6 +69,15 @@ const PopupComponent = () => {
     borderRadius: '4px',
     cursor: 'pointer',
   };
+  const navigate = useNavigate();
+
+  const handleNext = () => {
+    navigate('/6'); // Navigate to the "/3" route
+  };
+  const handleBack = () => {
+    navigate('/3'); // Navigate to the "/3" route
+  };
+
 
   return (
     <div style={popupContainerStyle}>
@@ -81,7 +91,9 @@ const PopupComponent = () => {
             <span className="jg-text--brand-small" style={{ opacity: 1 }}>
               1/4
             </span>
+            <button onClick={handleBack} type="button" class="_1HOY9 qa-back-button _3blyK" data-disabled="false"><span>Previous step</span></button>
             <button
+              onClick={handleNext}
               type="button"
               className="_1HOY9 qa-forward-button ohezf"
               data-disabled="false"

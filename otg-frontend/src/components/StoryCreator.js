@@ -1,5 +1,6 @@
 import { MDBListGroup, MDBListGroupItem, MDBRipple } from 'mdb-react-ui-kit';
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 
 export default function Activity() {
   return (
@@ -68,6 +69,10 @@ const PopupComponent = () => {
     borderRadius: '4px',
     cursor: 'pointer',
   };
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate('/3'); // Navigate to the "/3" route
+  };
 
   return (
     <div style={popupContainerStyle}>
@@ -75,7 +80,7 @@ const PopupComponent = () => {
       <div class="_2pASI _9QpxU">
       <section class="_1UAeM jg-background--white">
       <div class="jg-text--center jg-space-ptms jg-space-ptmd@md">
-      <button type="button" class="_1HOY9 qa-back-button _3blyK" data-disabled="false"><span style={{}}>Previous step</span></button><span class="jg-text--brand-small" style={{}}>2/4</span><button type="button" class="_1HOY9 qa-forward-button ohezf" data-disabled="false"><span style={{}}>Next step</span></button>
+      <button type="button" onClick={handleBack} class="_1HOY9 qa-back-button _3blyK" data-disabled="false"><span style={{}}>Previous step</span></button><span class="jg-text--brand-small" style={{}}>2/4</span><button type="button" class="_1HOY9 qa-forward-button ohezf" data-disabled="false"><span style={{}}>Next step</span></button>
       </div><header class="jg-space-mtms jg-space-mbmd jg-text--center"><h1><span>Write your story</span></h1><p class="jg-text--large"><span>What's the problem you're trying to solve and why do you care about it?</span></p><button type="button" class="c-EQc jg-space-mbsm jg-text--link jg-text--center"><span>Learn more about writing a compelling story</span> </button></header><div class="_2JA5v"><div class="jg-space-pbml" style={{}}><form><div class={{}}><div class="jg-form-group">
       <div class="jg-form-group"><div class="jg-space-psm jg-space-pmd@md jg-relative jg-bd jg-bd--solid jg-bd--very-light-grey"><div data-slate-editor="true" data-key="8" contenteditable="true" class="tP1Ms" spellcheck="true" role="textbox" data-gramm="false" autocomplete="off" autocorrect="off" style={{}}><p class="jg-text" data-key="7"><span data-key="6"><span data-offset-key="6-0">asxascSAC</span></span></p></div><div class="_3ieR6 jg-space-mtmd jg-space-mlmd@lg jg-space-ptxs jg-text--large"><div class="BPIlG jg-display-i"><button type="button" class="_1HOY9 undefined"><div class="y72rJ"><div class="DwlRO jg-text--small-light">Title</div>
       <div class="jg-icon--medium-small ZBaha">
