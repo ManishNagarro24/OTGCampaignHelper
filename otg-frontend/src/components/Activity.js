@@ -35,7 +35,7 @@ const PopupComponent = () => {
     width: '700px', // Set your desired width
     height: '85%',
     backgroundColor: '#fff',
-    padding: '20px',
+    padding:"45px",
     borderRadius: '10px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
   };
@@ -43,6 +43,8 @@ const PopupComponent = () => {
   const popupTitleStyle = {
     fontSize: '20px',
     color: 'blue',
+    alignItems:'center',
+    textAlign:'center'
   };
 
   const popupContentStyle = {
@@ -62,12 +64,11 @@ const PopupComponent = () => {
   return (
     <div style={popupContainerStyle}>
       <div style={popupStyle}>
-        <h2 style={popupTitleStyle}>Popup Title</h2>
-        <div>
+        <div style={{alignItems:"center"}}>
     <div className="_26LpG">
       <div className="_2pASI _9QpxU">
         <section className="_1UAeM jg-background--white">
-          <div className="jg-text--center jg-space-ptms jg-space-ptmd@md">
+          <div className="jg-text--center jg-space-ptms jg-space-ptmd@md" style={{textAlign:'center',padding:'10px'}}>
             <div className="_350mP"></div>
             <span className="jg-text--brand-small" style={{ opacity: 1 }}>
               1/4
@@ -80,7 +81,7 @@ const PopupComponent = () => {
               <span style={{ visibility: 'visible', opacity: 1 }}>Next step</span>
             </button>
           </div>
-          <header className="jg-space-mtms jg-space-mbmd jg-text--center">
+          <header className="jg-space-mtms jg-space-mbmd jg-text--center" style={{textAlign:'center'}}>
             <h1>Add a cover photo</h1>
             <p className="jg-text--large">
               Inspire your supporters with a photo that helps illustrate your cause
@@ -97,8 +98,8 @@ const PopupComponent = () => {
                           <button type="button" className="c-EQc _1APpp">
                             <div>
                               <div className="ZkMN-">
-                                <div>
-                                  <svg viewBox="0 0 99 99">
+                                <div >
+                                  <svg viewBox="0 0 99 99" style={{height:"333px",width:"592",textAlign:"center"}}>
                                     <g>
                                       <polygon
                                         fill="#999999"
@@ -131,20 +132,22 @@ const PopupComponent = () => {
                   </div>
                 </div>
                 <div className="container-fluid">
-                  <div className="row row--no-gutter">
-                    <div className="col-md-6 jg-space-prsm@md jg-space-mbsm jg-space-mbn@md">
-                      <button className="jg-btn jg-btn--ghost qa-upload-photo" type="button">
-                        Upload a photo
-                      </button>
+                  <div className="row row--no-gutter" style={{display:"flex",marginTop:"20px",height:"48px"}}>
+                    <div className="col-md-6 jg-space-prsm@md jg-space-mbsm jg-space-mbn@md" style={{width:"205px"}}>
                       <input
                         type="file"
                         className="jg-hidden qa-file-input"
                         accept="image/*"
                       />
                     </div>
-                    <div className="col-md-6 jg-space-plsm@md">
+                    <div className="col-md-6 jg-space-plsm@md" style={{width:"200px"}}>
                       <button className="jg-btn jg-btn--ghost qa-open-gallery" type="button">
                         Use one of ours
+                      </button>
+                    </div>
+                    <div className="col-md-6 jg-space-plsm@md" style={{width:"200px"}}>
+                      <button className="jg-btn jg-btn--ghost qa-open-gallery" type="button">
+                        Generate
                       </button>
                     </div>
                   </div>
@@ -154,38 +157,14 @@ const PopupComponent = () => {
           </div>
         </section>
       </div>
-      <footer className="_3oHBN">
-        <div className="jg-space-mbmd jg-tal">
-          <section>
-            <div className="jg-alert jg-alert--error--inline jg-alert--inline" role="alert">
-              <div className="container">
-                <div className="row">
-                  <div className="jg-alert__wrapper">
-                    <div className="jg-alert__icon jg-alert__icon--error">
-                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 .923C18.092.923 23.077 5.908 23.077 12S18.092 23.077 12 23.077.923 18.092.923 12 5.908.923 12 .923zm0 20.215c4.985 0 9.138-4.061 9.138-9.138A9.1 9.1 0 0012 2.862c-4.985 0-9.138 4.061-9.138 9.138A9.1 9.1 0 0012 21.138z"></path>
-                        <path d="M11.538 16.338h.831v1.2h-.83v-1.2zm-.184-9.6h1.108l-.185 6.37h-.83l-.093-6.37z"></path>
-                        <path d="M11.354 6.092h1.108c.369 0 .646.277.646.646l-.185 6.37a.631.631 0 01-.646.646h-.83a.631.631 0 01-.647-.646l-.185-6.37c.093-.369.462-.646.739-.646z"></path>
-                        <circle cx="1.846" cy="1.2" r="1.2" transform="translate(10.154 15.692)"></circle>
-                      </svg>
-                    </div>
-                    <div className="jg-alert__content jg-text--regular">
-                      An error has occurred, please try again
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <button className="jg-btn _1jNyc">Save and continue</button>
+      <footer className="_3oHBN" style={{textAlign:"center",marginTop:"20px"}}>
+        <button className="jg-btn _1jNyc" style={closeButtonStyle}>Save and continue</button>
         <p className="jg-space-mtmd jg-color--empress jg-text--light">
           You can edit this later
         </p>
       </footer>
     </div>
         </div>
-        <button style={closeButtonStyle}>Close</button>
       </div>
     </div>
   );
