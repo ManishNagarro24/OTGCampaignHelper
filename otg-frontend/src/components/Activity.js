@@ -1,8 +1,14 @@
-import React from 'react'
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 
+
+
 export default function Activity() {
+  
   return (
+    
+    <>
+    
         <div style={{
       position: 'relative',
       backgroundImage: './Images/Background2.png',
@@ -13,8 +19,10 @@ export default function Activity() {
       </img>
       <PopupComponent/> 
     </div>
+    </>
   )
 }
+
 
 const PopupComponent = () => {
   const popupContainerStyle = {
@@ -37,7 +45,7 @@ const PopupComponent = () => {
     padding:"20px",
     borderRadius: '0px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
-    marginTop:'190px'
+    marginTop:'140px'
   };
 
   const popupTitleStyle = {
@@ -126,23 +134,29 @@ const PopupComponent = () => {
                   </div>
                 </div>
                 <div className="container-fluid">
-                  <div className="row row--no-gutter" style={{display:"flex",marginTop:"20px",height:"20px",width:"700px"}}>
-                    <div className="col-md-6 jg-space-prsm@md jg-space-mbsm jg-space-mbn@md" style={{width:"205px",boxShadow:"none"}}>
-                      <input id="imageupload"
+                  <div className="row row--no-gutter" style={{display:"flex",marginTop:"20px",height:"20px",width:"700px",alignContent:"center" ,alignItems:"center",paddingTop:"20px"}}>
+                    <div className="col-md-6 jg-space-prsm@md jg-space-mbsm jg-space-mbn@md" style={{width:"205px"}}>
+                      {/* <input id="imageupload"
                         type="file"
-                        className="jg-hidden qa-file-input"
-                        accept="image/*"                        
+                        class="btn btn-outline-secondary"
+                        accept="image/*"  
+                                     
+                      /> */}
+                   <button class="btn btn-outline-secondary" data-mdb-ripple-color="dark" type="button" style={{borderColor:"darkgray",boxShadow:"none",color:"black",borderWidth:"1",width:"220px",padding:"10px",marginLeft:"-10px"}}>
+                        Upload a photo
+                      </button>
+                      <input
+                        type="file"                       
+                        style={{display: 'none'}} /* Make the file input element invisible */
                       />
                     </div>
                     <span className="col-md-6 jg-space-plsm@md" style={{width:"200px"}}>
-                      <button className="jg-btn jg-btn--ghost qa-open-gallery" type="button" style={{borderColor:"lightgray",boxShadow:"none"}}>
+                      <button class="btn btn-outline-secondary" data-mdb-ripple-color="dark" type="button" style={{borderColor:"darkgray",boxShadow:"none",color:"black",borderWidth:"1",width:"220px",padding:"10px",marginRight:"-90px",marginLeft:"25px"}}>
                         Use one of ours
                       </button>
                     </span>
                     <span className="col-md-6 jg-space-plsm@md" style={{width:"200px"}}>
-                      <button className="jg-btn jg-btn--ghost qa-open-gallery" type="button" style={{borderColor:"lightgray",boxShadow:"none",marginLeft:"-40px",backgroundColor:"#C3B1E1"}}>
-                        Generate
-                      </button>
+                      
                     </span>
                   </div>
                 </div>
@@ -152,10 +166,21 @@ const PopupComponent = () => {
         </section>
       </div>
       <footer className="_3oHBN" style={{textAlign:"center",marginTop:"30px"}}>
+        <div>
+       
+        <button type="button" style={{backgroundColor:"#af96d7",marginBottom:"10px",borderRadius:"4px",border:"none",color:"white",marginTop:"10px",padding:"5px"}}>
+          Generate using AI
+        </button>
+        </div>
+        <div>
         <button className="jg-btn _1jNyc" style={closeButtonStyle}>Save and continue</button>
-        <p className="jg-space-mtmd jg-color--empress jg-text--light" style={{fontSize:"15px"}}>
+        <p className="jg-space-mtmd jg-color--empress jg-text--light" style={{fontSize:"12px",color:"gray",marginTop:"px"}}>
           You can edit this later
         </p>
+        </div>
+        
+        
+       
       </footer>
     </div>
         </div>

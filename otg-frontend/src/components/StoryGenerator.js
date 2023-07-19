@@ -10,6 +10,7 @@ export default function Activity() {
       backgroundImage: './Images/Background2.png',
       width: '100%%',
       height: '100vh'
+      ,fontStyle:"courier"
      
     }}>
       <img src="./Images/Background2.png">
@@ -49,7 +50,7 @@ const PopupComponent = () => {
     padding:"20px",
     borderRadius: '0px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
-    marginTop:'190px'
+    marginTop:'110px'
   };
 
   const popupTitleStyle = {
@@ -77,43 +78,43 @@ const PopupComponent = () => {
   return (
     <div style={popupContainerStyle}>
       <div style={popupStyle}>
-        <div style={{alignItems:"center"}}>
+        <div style={{alignItems:"center",fontStyle:"courier"}}>
     <div className="_26LpG" >
       <div className="_2pASI _9QpxU">
         <section className="_1UAeM jg-background--white">
-          <div className="jg-text--center jg-space-ptms jg-space-ptmd@md" style={{textAlign:'center',padding:'10px',marginLeft:"10px"}}>
+          <div className="jg-text--center jg-space-ptms jg-space-ptmd@md" style={{textAlign:'center',padding:'10px',marginLeft:"10px",fontStyle:"courier"}}>
             <ButtonWithSymbol/>            
           </div>
-          <header className="jg-space-mtms jg-space-mbmd jg-text--center" style={{textAlign:'center',fontSize:"30px",marginTop:"-10px"}}>
+          <header className="jg-space-mtms jg-space-mbmd jg-text--center" style={{textAlign:'center',fontSize:"30px",marginTop:"-10px",fontStyle:"courier"}}>
             <p>Create your story</p>
           </header>
           <div>
-            <label style={{fontSize:"13px",marginTop:"-10px",marginBottom:"10px"}}>Our cause-driven fundraiser story has effectively gathered an astounding $40 billion in donations. It is noteworthy that 50% of the stories managed to accomplish their fundraising targets.</label>
-          </div>
-          <div className="jg-space-pbml jg-space-phmd _2JA5v" style={{height:"200px"}}>
-            <div className="_1tu_5" style={{height:"100%"}}>
-              <div className="_1xx8B" style={{height:"100%"}}>
+            <label style={{fontSize:"13px",marginTop:"-10px",marginBottom:"10px",textAlign:"justify",fontStyle:"courier"}}>Our cause-driven fundraiser story has effectively gathered an astounding $40 billion in donations. It is noteworthy that 50% of the stories managed to accomplish their fundraising targets.</label>
+                    </div>
+          <div className="jg-space-pbml jg-space-phmd _2JA5v" style={{height:"200px",fontStyle:"courier"}}>
+            <div className="_1tu_5" style={{height:"100%",fontStyle:"courier"}}>
+              <div className="_1xx8B" style={{height:"100%",fontStyle:"courier"}}>
                     <SectionComponent/>                               
                 </div>
               </div>   
             </div>
-            <p className="jg-text--light jg-space-phsm jg-space-mn" style={{fontSize:"14px",marginBottom:"-3px"}}>
-                Tell us what more to be added to this story
+            <p className="jg-text--light jg-space-phsm jg-space-mn" style={{fontSize:"14px",marginBottom:"-2px",fontStyle:"courier"}}>
+            Please provide additional information to enhance this story.
                 </p>   
-          <div style={{ display: 'flex', marginBottom: '10px', height:"50px"}}>
+          <div style={{ display: 'flex', marginBottom: '10px', height:"50px",fontStyle:"courier"}}>
             <input
               type="text"
               value={inputValue}
               onChange={handleInputChange}
-              style={{ flex: '1', marginRight: '10px', padding: '5px' ,borderColor:"lightGray"}}
+              style={{ flex: '1', padding: '2px' ,borderColor:"lightGray",borderRadius:"6px",fontStyle:"courier"}}
             />
           </div>
-          <button onClick={handleGenerateClick} style={{borderColor:"lightGray" ,backgroundColor:"#C3B1E1"}}>Generate</button>
+          <button onClick={handleGenerateClick} style={{borderColor:"lightGray" ,backgroundColor:"#af96d7",borderRadius:"9px",marginLeft:"300px",fontStyle:"courier"}} class="btn btn-secondary">Generate using AI</button>
         </section>
       </div>
-      <footer className="_3oHBN" style={{textAlign:"center",marginTop:"20px"}}>
+      <footer className="_3oHBN" style={{textAlign:"center",marginTop:"20px",fontStyle:"courier"}}>
         <button className="jg-btn _1jNyc" style={closeButtonStyle}>Save and continue</button>
-        <p className="jg-space-mtmd jg-color--empress jg-text--light" style={{fontSize:"11px"}}>
+        <p className="jg-space-mtmd jg-color--empress jg-text--light" style={{fontSize:"12px",fontStyle:"courier",color:"gray"}}>
           You can edit this later
         </p>
       </footer>
@@ -138,7 +139,7 @@ const SectionComponent = () => {
       { label: 'Suggestion1', content: 'Content 1' },
       { label: 'Suggestion2', content: 'Content 2' },
       { label: 'Suggestion3', content: 'Content 3' },
-      { label: 'Tone Suggestion', content: 'Content 3' },
+      { label: 'Tone Suggestion', content: 'Content 3' }
       // Add more sections as needed
     ];
   
@@ -153,13 +154,20 @@ const SectionComponent = () => {
     const sectionStyle = {
       height:"30px",
       marginBottom: '10px',
-      backgroundColor: '#f5f5f5',
+      backgroundColor: "#f0ebf7",
       cursor: 'pointer',
+      padding:"3px",
+      borderRadius:"6px",
+      borderColor:"#997acc",
+      fontSize:"12px"
+      
     };
   
     const sectionContentStyle = {
       display: 'none',
-      marginTop: '10px',
+      marginTop: '10px'
+      
+    
     };
   
     const downArrowStyle = {
@@ -175,9 +183,8 @@ const SectionComponent = () => {
   
     return (
       <div style={containerStyle}>
-        <p className="jg-text--large">
-              Here are few suggestions you can include in the story
-            </p>
+       <label style={{fontSize:"13px",marginTop:"2px",marginBottom:"10px",textAlign:"center",fontWeight:"bold",color:"#6f45b4",fontStyle:"courier"}}>Statistics demonstrate successful stories incorporating these suggestions. Choose from below to achieve your goals.</label>
+  
         {sectionData.map((section, index) => (
           <div
             key={index}
