@@ -60,12 +60,7 @@ const PopupComponent = () => {
     borderRadius: '4px',
     cursor: 'pointer',
   };
-  const navigate = useNavigate();
-
-  const handleNavigation = () => {
-    navigate('/5'); // Navigate to the "/3" route
-  };
-
+  
 
   return (
     <div style={popupContainerStyle}>
@@ -75,11 +70,10 @@ const PopupComponent = () => {
       <div className="_2pASI _9QpxU">
         <section className="_1UAeM jg-background--white">
           <div className="jg-text--center jg-space-ptms jg-space-ptmd@md" style={{textAlign:'center',padding:'10px'}}>
-            <div className="_350mP"></div>
-            <span className="jg-text--brand-small" style={{ opacity: 1 }}>
+            <span className="jg-text--brand-small" style={{ opacity: 1,color: '#7A04DD'}}>
               1/4
             </span>
-            <MDBBtn onClick={handleNavigation} style={{marginTop:"70px",width:"250px",backgroundColor:"lightskyblue",borderColor:"lightgrey"}}><span style={{ visibility: 'visible', opacity: 1 }}>Next step</span></MDBBtn>     
+            <ButtonWithSymbol/>
           </div>
           <header className="jg-space-mtms jg-space-mbmd jg-text--center" style={{textAlign:'center'}}>
             <h1>Add a cover photo</h1>
@@ -168,4 +162,31 @@ const PopupComponent = () => {
       </div>
     </div>
   );
+};
+
+
+const ButtonWithSymbol = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate('/5'); // Navigate to the "/3" route
+  };
+
+  return (
+    <span style={containerStyle} onClick={handleNavigation}>
+      <span style={symbolStyle}>&gt;</span>
+    </span>
+  );
+};
+
+
+const containerStyle = {
+  display: 'inline-block',
+  cursor: 'pointer',
+  marginLeft:"2vh"
+};
+
+const symbolStyle = {
+  fontSize: '24px',
+  color: '#7A04DD'
 };

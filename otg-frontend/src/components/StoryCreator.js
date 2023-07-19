@@ -69,10 +69,6 @@ const PopupComponent = () => {
     borderRadius: '4px',
     cursor: 'pointer',
   };
-  const navigate = useNavigate();
-  const handleBack = () => {
-    navigate('/3'); // Navigate to the "/3" route
-  };
 
   return (
     <div style={popupContainerStyle}>
@@ -80,7 +76,7 @@ const PopupComponent = () => {
       <div class="_2pASI _9QpxU" >
       <section class="_1UAeM jg-background--white" >
       <div class="jg-text--center jg-space-ptms jg-space-ptmd@md">
-      <button type="button" onClick={handleBack} class="_1HOY9 qa-back-button _3blyK" data-disabled="false"><span style={{}}>Previous step</span></button><span class="jg-text--brand-small" style={{}}>2/4</span><button type="button" class="_1HOY9 qa-forward-button ohezf" data-disabled="false"><span style={{}}>Next step</span></button>
+      <ButtonWithSymbol/>
       </div><header class="jg-space-mtms jg-space-mbmd jg-text--center"><h1 style={{marginLeft:"80px"}}><span>Write your story</span></h1><p class="jg-text--large"><span>What's the problem you're trying to solve and why do you care about it?</span></p><a type="link" class="c-EQc jg-space-mbsm jg-text--link jg-text--center" style={{margin:"10%",textDecoration:"none"}}><span>Learn more about writing a compelling story</span> </a></header><div class="_2JA5v"><div class="jg-space-pbml" style={{}}><form><div class={{}}><div class="jg-form-group">
       <div class="jg-form-group"><div class="jg-space-psm jg-space-pmd@md jg-relative jg-bd jg-bd--solid jg-bd--very-light-grey" ><div data-slate-editor="true" data-key="8" contenteditable="true" class="tP1Ms" spellcheck="true" role="textbox" data-gramm="false" autocomplete="off" autocorrect="off" style={{marginTop:"10px"}}><p class="jg-text" data-key="7"><span data-key="6"><span data-offset-key="6-0" style={{}}>Write your story here..</span></span></p></div><div class="_3ieR6 jg-space-mtmd jg-space-mlmd@lg jg-space-ptxs jg-text--large">
 
@@ -93,4 +89,44 @@ const PopupComponent = () => {
       </div>
     </div>
   );
+};
+const ButtonWithSymbol = () => {
+  const navigate = useNavigate();
+
+  const handleNext = () => {
+      navigate('/6'); // Navigate to the "/3" route
+  };
+  const handleBack = () => {
+      navigate('/5'); // Navigate to the "/3" route
+  };
+
+
+
+  return (
+    <span style={containerStyle} >
+      <span onClick={handleBack} style={symbolStyleLeft}>&lt;</span>
+      <span className="jg-text--brand-small" style={{ opacity: 1 }}>
+            3/4
+      </span>
+      <span onClick={handleNext}style={symbolStyleRight}>&gt;</span>
+    </span>
+  );
+};
+
+
+const containerStyle = {
+  display: 'inline-block',
+  cursor: 'pointer',
+  marginLeft:"2vh"
+};
+
+const symbolStyleLeft = {
+  fontSize: '24px',
+  color: '#7A04DD',
+  marginRight:'20px'
+};
+const symbolStyleRight = {
+  fontSize: '24px',
+  color: '#7A04DD',
+  marginLeft:'20px'
 };

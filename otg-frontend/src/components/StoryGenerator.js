@@ -69,15 +69,7 @@ const PopupComponent = () => {
     borderRadius: '4px',
     cursor: 'pointer',
   };
-  const navigate = useNavigate();
-
-  const handleNext = () => {
-    navigate('/6'); // Navigate to the "/3" route
-  };
-  const handleBack = () => {
-    navigate('/3'); // Navigate to the "/3" route
-  };
-
+  
 
   return (
     <div style={popupContainerStyle}>
@@ -87,19 +79,8 @@ const PopupComponent = () => {
       <div className="_2pASI _9QpxU">
         <section className="_1UAeM jg-background--white">
           <div className="jg-text--center jg-space-ptms jg-space-ptmd@md" style={{textAlign:'center',padding:'10px'}}>
-            <div className="_350mP"></div>
-            <span className="jg-text--brand-small" style={{ opacity: 1 }}>
-              1/4
-            </span>
-            <button onClick={handleBack} type="button" class="_1HOY9 qa-back-button _3blyK" data-disabled="false"><span>Previous step</span></button>
-            <button
-              onClick={handleNext}
-              type="button"
-              className="_1HOY9 qa-forward-button ohezf"
-              data-disabled="false"
-            >
-              <span style={{ visibility: 'visible', opacity: 1 }}>Next step</span>
-            </button>
+            <ButtonWithSymbol/>
+            
           </div>
           <header className="jg-space-mtms jg-space-mbmd jg-text--center" style={{textAlign:'center'}}>
             <h1>Create your story</h1>
@@ -214,5 +195,46 @@ const SectionComponent = () => {
         ))}
       </div>
     );
+  };
+
+  const ButtonWithSymbol = () => {
+    const navigate = useNavigate();
+
+    const handleNext = () => {
+        navigate('/6'); // Navigate to the "/3" route
+    };
+    const handleBack = () => {
+        navigate('/3'); // Navigate to the "/3" route
+    };
+
+
+  
+    return (
+      <span style={containerStyle} >
+        <span onClick={handleBack} style={symbolStyleLeft}>&lt;</span>
+        <span className="jg-text--brand-small" style={{ opacity: 1 }}>
+              2/4
+        </span>
+        <span onClick={handleNext}style={symbolStyleRight}>&gt;</span>
+      </span>
+    );
+  };
+  
+  
+  const containerStyle = {
+    display: 'inline-block',
+    cursor: 'pointer',
+    marginLeft:"2vh"
+  };
+  
+  const symbolStyleLeft = {
+    fontSize: '24px',
+    color: '#7A04DD',
+    marginRight:'20px'
+  };
+  const symbolStyleRight = {
+    fontSize: '24px',
+    color: '#7A04DD',
+    marginLeft:'20px'
   };
   
