@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
-import { MDBListGroup,MDBInput,MDBBtn} from 'mdb-react-ui-kit';
 
 export default function Activity() {
   return (
@@ -141,7 +140,7 @@ const PopupComponent = () => {
                       </button>
                     </span>
                     <span className="col-md-6 jg-space-plsm@md" style={{width:"200px"}}>
-                      <button className="jg-btn jg-btn--ghost qa-open-gallery" type="button" style={{borderColor:"lightgray",boxShadow:"none",marginLeft:"-40px"}}>
+                      <button className="jg-btn jg-btn--ghost qa-open-gallery" type="button" style={{borderColor:"lightgray",boxShadow:"none",marginLeft:"-40px",backgroundColor:"#C3B1E1"}}>
                         Generate
                       </button>
                     </span>
