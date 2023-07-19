@@ -26,7 +26,7 @@ export default function Header() {
             />
              <img
               id="img2"
-              src='../Images/UserLogo.png'
+              src='../Images/username.png'
               height='40'
               alt=''
               loading='lazy'
