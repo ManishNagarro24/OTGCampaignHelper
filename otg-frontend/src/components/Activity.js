@@ -1,6 +1,9 @@
-import React from 'react'
+
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { MDBListGroup,MDBInput,MDBBtn} from 'mdb-react-ui-kit';
+import { causeDescription,selectedOption } from './Create';
+import React, { useState } from 'react';
+
 
 export default function Activity() {
   return (
@@ -60,7 +63,30 @@ const PopupComponent = () => {
     borderRadius: '4px',
     cursor: 'pointer',
   };
-  
+  var [imageUrl, setImageUrl] = useState('');
+  const handleGenerate = () => {
+    var data = {
+      "Prompt":"Cause: "+selectedOption
+    };
+
+    fetch('http://127.0.0.1:5000/generateimage', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(response => response.json())
+      .then(responseData => {
+        imageUrl=responseData['image_url']
+        setImageUrl(imageUrl)
+        // Handle the API response
+      })
+      .catch(error => {
+        // Handle any errors
+        alert(error)
+      });
+  };
 
   return (
     <div style={popupContainerStyle}>
@@ -93,24 +119,9 @@ const PopupComponent = () => {
                             <div>
                               <div className="ZkMN-">
                                 <div >
-                                  <svg viewBox="0 0 99 99" style={{height:"333px",width:"592",textAlign:"center"}}>
-                                    <g>
-                                      <polygon
-                                        fill="#999999"
-                                        points="99.026,11.098 87.927,11.098 87.927,0 79.481,0 79.481,11.1 68.384,11.1 68.384,19.545 79.481,19.543 79.481,30.643 87.927,30.643 87.927,19.543 99.026,19.541 "
-                                      ></polygon>
-                                      <g>
-                                        <polygon
-                                          fill="#999999"
-                                          points="80.753,72.615 6.503,72.615 6.503,18.57 63.353,18.57 63.353,12.066 0,12.066 0,79.117 87.255,79.117 87.255,36.186 80.753,36.186"
-                                        ></polygon>
-                                        <path
-                                          fill="#999999"
-                                          d="M63.239,23.645h-1.243H11.695v39.232l14.826-9.841l9.187,5.772l22.304-24.537l2.89,1.182l1.095,1.265l0,0l13.337,15.399V36.718v-0.765V23.645H63.239z M25.867,40.57c-3.409,0-6.298-2.887-6.298-6.299s2.889-6.299,6.298-6.299c3.413,0,6.299,2.887,6.299,6.299S29.28,40.57,25.867,40.57z"
-                                        ></path>
-                                      </g>
-                                    </g>
-                                  </svg>
+                                <div style={{ height: '333px', width: '592px', textAlign: 'center' }}>
+                                  {imageUrl && <img src={imageUrl} alt="Generated Image" style={{ maxHeight: '100%', maxWidth: '100%' }} />}
+                                </div>
                                 </div>
                               </div>
                               <p className="jg-text--light jg-space-phsm jg-space-mn">
@@ -140,7 +151,7 @@ const PopupComponent = () => {
                       </button>
                     </div>
                     <div className="col-md-6 jg-space-plsm@md" style={{width:"200px"}}>
-                      <button className="jg-btn jg-btn--ghost qa-open-gallery" type="button">
+                      <button onClick={handleGenerate} className="jg-btn jg-btn--ghost qa-open-gallery" type="button">
                         Generate
                       </button>
                     </div>
