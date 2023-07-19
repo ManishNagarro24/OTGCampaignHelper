@@ -88,7 +88,7 @@ const PopupComponent = () => {
             <p>Create your story</p>
           </header>
           <div>
-            <label style={{fontSize:"13px",marginTop:"-10px",marginBottom:"10px"}}>Our previous fundraiser story based on your cause has generated donations worth $ 40 billion.50% of the stories were able to meet the goal.</label>
+            <label style={{fontSize:"13px",marginTop:"-10px",marginBottom:"10px"}}>Our cause-driven fundraiser story has effectively gathered an astounding $40 billion in donations. It is noteworthy that 50% of the stories managed to accomplish their fundraising targets.</label>
           </div>
           <div className="jg-space-pbml jg-space-phmd _2JA5v" style={{height:"200px"}}>
             <div className="_1tu_5" style={{height:"100%"}}>
