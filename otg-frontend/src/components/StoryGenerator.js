@@ -7,11 +7,12 @@ export default function Activity() {
   return (
     <div style={{
       position: 'relative',
-      backgroundImage: './Images/BackGround.png',
-      width: '100%',
-      height: '100vh',
+      backgroundImage: './Images/Background2.png',
+      width: '100%%',
+      height: '100vh'
+     
     }}>
-      <img src="./Images/BackGround.png">
+      <img src="./Images/Background2.png">
       </img>
       <PopupComponent/> 
     </div>
@@ -96,10 +97,10 @@ const PopupComponent = () => {
                 </div>
               </div>   
             </div>
-            <p className="jg-text--light jg-space-phsm jg-space-mn">
+            <p className="jg-text--light jg-space-phsm jg-space-mn" style={{fontSize:"14px",marginBottom:"-3px"}}>
                 Tell us what more to be added to this story
                 </p>   
-          <div style={{ display: 'flex', marginBottom: '10px', height:"80px"}}>
+          <div style={{ display: 'flex', marginBottom: '10px', height:"50px"}}>
             <input
               type="text"
               value={inputValue}
@@ -112,7 +113,7 @@ const PopupComponent = () => {
       </div>
       <footer className="_3oHBN" style={{textAlign:"center",marginTop:"20px"}}>
         <button className="jg-btn _1jNyc" style={closeButtonStyle}>Save and continue</button>
-        <p className="jg-space-mtmd jg-color--empress jg-text--light">
+        <p className="jg-space-mtmd jg-color--empress jg-text--light" style={{fontSize:"11px"}}>
           You can edit this later
         </p>
       </footer>

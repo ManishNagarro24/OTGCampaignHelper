@@ -5,12 +5,12 @@ export default function Activity() {
   return (
     <div style={{
       position: 'relative',
-      backgroundImage: './Images/BackGround.png',
+      backgroundImage: './Images/Background2.png',
       width: '100%',
       height: '100vh',
       
     }}>
-      <img src="./Images/BackGround.png">
+      <img src="./Images/Background2.png">
       </img>
       <PopupComponent/> 
     </div>
@@ -90,7 +90,7 @@ const PopupComponent = () => {
         <div data-slate-editor="true" data-key="8" contenteditable="true" class="tP1Ms" spellcheck="true" role="textbox" data-gramm="false" autocomplete="off" autocorrect="off" style={{marginTop:"10px"}}>
           <p class="jg-text" data-key="7">
             <span data-key="6">
-              <span data-offset-key="6-0" style={{}}>g</span>
+              <span data-offset-key="6-0" style={{}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>
         </span>
         
         </p></div><div class="_3ieR6 jg-space-mtmd jg-space-mlmd@lg jg-space-ptxs jg-text--large">

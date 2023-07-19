@@ -5,11 +5,11 @@ export default function Activity() {
   return (
         <div style={{
       position: 'relative',
-      backgroundImage: './Images/BackGround.png',
+      backgroundImage: './Images/Background2.png',
       width: '100%',
       height: '100vh',
     }}>
-      <img src="./Images/BackGround.png">
+      <img src="./Images/Background2.png">
       </img>
       <PopupComponent/> 
     </div>
@@ -26,8 +26,8 @@ const PopupComponent = () => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    zIndex: '9999',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    
   };
 
   const popupStyle = {
