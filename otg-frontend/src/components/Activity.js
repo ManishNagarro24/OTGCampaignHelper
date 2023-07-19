@@ -9,11 +9,11 @@ export default function Activity() {
   return (
         <div style={{
       position: 'relative',
-      backgroundImage: './Images/BackGround.png',
+      backgroundImage: './Images/Background2.png',
       width: '100%',
       height: '100vh',
     }}>
-      <img src="./Images/BackGround.png">
+      <img src="./Images/Background2.png">
       </img>
       <PopupComponent/> 
     </div>
@@ -30,21 +30,22 @@ const PopupComponent = () => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    zIndex: '9999',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    
   };
 
   const popupStyle = {
-    width: '700px', // Set your desired width
-    height: '85%',
+    width: '500px', // Set your desired width
+    height: '700px',
     backgroundColor: '#fff',
-    padding:"45px",
-    borderRadius: '10px',
+    padding:"20px",
+    borderRadius: '0px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+    marginTop:'190px'
   };
 
   const popupTitleStyle = {
-    fontSize: '20px',
+    fontSize: '10px',
     color: 'blue',
     alignItems:'center',
     textAlign:'center'
@@ -102,12 +103,12 @@ const PopupComponent = () => {
             <ButtonWithSymbol/>
           </div>
           <header className="jg-space-mtms jg-space-mbmd jg-text--center" style={{textAlign:'center'}}>
-            <h1>Add a cover photo</h1>
-            <p className="jg-text--large">
+            <p style={{fontSize:"30px",marginTop:"-10px"}}>Add a cover photo</p>
+            <p style={{fontSize:"15px",marginTop:"-10px"}}>
               Inspire your supporters with a photo that helps illustrate your cause
             </p>
           </header>
-          <div className="jg-space-pbml jg-space-phmd _2JA5v">
+          <div className="jg-space-pbml jg-space-phmd _2JA5v" >
             <div className="_1tu_5">
               <div className="_1xx8B">
                 <div>
@@ -115,8 +116,8 @@ const PopupComponent = () => {
                     <div className="jg-space-mbmd">
                       <div className="VhevR">
                         <div className="drop">
-                          <button type="button" className="c-EQc _1APpp">
-                            <div>
+                          <button type="button" className="c-EQc _1APpp" style={{width:"460px",alignSelf:"center",borderStyle:"dashed",borderWidth:"3px",borderColor:"lightgray"}}>
+                            <div style={{height:"230px"}}>
                               <div className="ZkMN-">
                                 <div >
                                 <div style={{ height: '333px', width: '592px', textAlign: 'center' }}>
@@ -124,7 +125,7 @@ const PopupComponent = () => {
                                 </div>
                                 </div>
                               </div>
-                              <p className="jg-text--light jg-space-phsm jg-space-mn">
+                              <p className="jg-text--light jg-space-phsm jg-space-mn" style={{fontSize:"10px",marginTop:"-60px"}}>
                                 For best results, your photo should be at least 700px wide and
                                 landscape format
                               </p>
@@ -137,16 +138,16 @@ const PopupComponent = () => {
                   </div>
                 </div>
                 <div className="container-fluid">
-                  <div className="row row--no-gutter" style={{display:"flex",marginTop:"20px",height:"48px"}}>
-                    <div className="col-md-6 jg-space-prsm@md jg-space-mbsm jg-space-mbn@md" style={{width:"205px"}}>
-                      <input
+                  <div className="row row--no-gutter" style={{display:"flex",marginTop:"20px",height:"20px",width:"700px"}}>
+                    <div className="col-md-6 jg-space-prsm@md jg-space-mbsm jg-space-mbn@md" style={{width:"205px",boxShadow:"none"}}>
+                      <input id="imageupload"
                         type="file"
                         className="jg-hidden qa-file-input"
-                        accept="image/*"
+                        accept="image/*"                        
                       />
                     </div>
-                    <div className="col-md-6 jg-space-plsm@md" style={{width:"200px"}}>
-                      <button className="jg-btn jg-btn--ghost qa-open-gallery" type="button">
+                    <span className="col-md-6 jg-space-plsm@md" style={{width:"200px"}}>
+                      <button className="jg-btn jg-btn--ghost qa-open-gallery" type="button" style={{borderColor:"lightgray",boxShadow:"none"}}>
                         Use one of ours
                       </button>
                     </div>
@@ -154,7 +155,7 @@ const PopupComponent = () => {
                       <button onClick={handleGenerate} className="jg-btn jg-btn--ghost qa-open-gallery" type="button">
                         Generate
                       </button>
-                    </div>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -162,9 +163,9 @@ const PopupComponent = () => {
           </div>
         </section>
       </div>
-      <footer className="_3oHBN" style={{textAlign:"center",marginTop:"20px"}}>
+      <footer className="_3oHBN" style={{textAlign:"center",marginTop:"30px"}}>
         <button className="jg-btn _1jNyc" style={closeButtonStyle}>Save and continue</button>
-        <p className="jg-space-mtmd jg-color--empress jg-text--light">
+        <p className="jg-space-mtmd jg-color--empress jg-text--light" style={{fontSize:"15px"}}>
           You can edit this later
         </p>
       </footer>

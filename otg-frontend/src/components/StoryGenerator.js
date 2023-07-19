@@ -1,3 +1,4 @@
+import { auto } from '@popperjs/core';
 import { MDBListGroup, MDBListGroupItem, MDBRipple} from 'mdb-react-ui-kit';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
@@ -6,11 +7,12 @@ export default function Activity() {
   return (
     <div style={{
       position: 'relative',
-      backgroundImage: './Images/BackGround.png',
-      width: '100%',
-      height: '100vh',
+      backgroundImage: './Images/Background2.png',
+      width: '100%%',
+      height: '100vh'
+     
     }}>
-      <img src="./Images/BackGround.png">
+      <img src="./Images/Background2.png">
       </img>
       <PopupComponent/> 
     </div>
@@ -41,12 +43,13 @@ const PopupComponent = () => {
   };
 
   const popupStyle = {
-    width: '700px', // Set your desired width
-    height: '85%',
+    width: '500px', // Set your desired width
+    height: '700px',
     backgroundColor: '#fff',
-    padding:"45px",
-    borderRadius: '10px',
+    padding:"20px",
+    borderRadius: '0px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+    marginTop:'190px'
   };
 
   const popupTitleStyle = {
@@ -78,15 +81,14 @@ const PopupComponent = () => {
     <div className="_26LpG" >
       <div className="_2pASI _9QpxU">
         <section className="_1UAeM jg-background--white">
-          <div className="jg-text--center jg-space-ptms jg-space-ptmd@md" style={{textAlign:'center',padding:'10px'}}>
-            <ButtonWithSymbol/>
-            
+          <div className="jg-text--center jg-space-ptms jg-space-ptmd@md" style={{textAlign:'center',padding:'10px',marginLeft:"10px"}}>
+            <ButtonWithSymbol/>            
           </div>
-          <header className="jg-space-mtms jg-space-mbmd jg-text--center" style={{textAlign:'center'}}>
-            <h1>Create your story</h1>
+          <header className="jg-space-mtms jg-space-mbmd jg-text--center" style={{textAlign:'center',fontSize:"30px",marginTop:"-10px"}}>
+            <p>Create your story</p>
           </header>
           <div>
-            <label>Our previous fundraiser story based on your cause has generated donations worth $ 40 billion.50% of the stories were able to meet the goal.</label>
+            <label style={{fontSize:"13px",marginTop:"-10px",marginBottom:"10px"}}>Our cause-driven fundraiser story has effectively gathered an astounding $40 billion in donations. It is noteworthy that 50% of the stories managed to accomplish their fundraising targets.</label>
           </div>
           <div className="jg-space-pbml jg-space-phmd _2JA5v" style={{height:"200px"}}>
             <div className="_1tu_5" style={{height:"100%"}}>
@@ -95,23 +97,23 @@ const PopupComponent = () => {
                 </div>
               </div>   
             </div>
-            <p className="jg-text--light jg-space-phsm jg-space-mn">
+            <p className="jg-text--light jg-space-phsm jg-space-mn" style={{fontSize:"14px",marginBottom:"-3px"}}>
                 Tell us what more to be added to this story
                 </p>   
-          <div style={{ display: 'flex', marginBottom: '10px', height:"80px" }}>
+          <div style={{ display: 'flex', marginBottom: '10px', height:"50px"}}>
             <input
               type="text"
               value={inputValue}
               onChange={handleInputChange}
-              style={{ flex: '1', marginRight: '10px', padding: '5px' }}
+              style={{ flex: '1', marginRight: '10px', padding: '5px' ,borderColor:"lightGray"}}
             />
           </div>
-          <button onClick={handleGenerateClick}>Generate</button>
+          <button onClick={handleGenerateClick} style={{borderColor:"lightGray" ,backgroundColor:"#C3B1E1"}}>Generate</button>
         </section>
       </div>
       <footer className="_3oHBN" style={{textAlign:"center",marginTop:"20px"}}>
         <button className="jg-btn _1jNyc" style={closeButtonStyle}>Save and continue</button>
-        <p className="jg-space-mtmd jg-color--empress jg-text--light">
+        <p className="jg-space-mtmd jg-color--empress jg-text--light" style={{fontSize:"11px"}}>
           You can edit this later
         </p>
       </footer>
