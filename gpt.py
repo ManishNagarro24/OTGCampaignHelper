@@ -1,7 +1,8 @@
 import openai
 import json
-openai.api_key = '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'
-def call_gpt(prompt):
+openai.api_key = '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'
+def call_gpt(cause,suggestions):
+    prompt=f"Your role is to create a fundraiser story for getting donation {cause} cause and these suggestions {suggestions}.Create a fundraising story"
     response = openai.Completion.create(
             engine='text-davinci-003',
             prompt=prompt,
@@ -14,7 +15,7 @@ def call_gpt(prompt):
     return response_text
 
 def call_gpt_image(user_input):
-    prompt=f"Generate image related to {user_input}.This image will be used in a fundraising story to take donations for {user_input}"
+    prompt=f"Generate real life image related to {user_input} in landscape format 1000px wide and 400px height.This image will be used in a fundraising story to take donations for {user_input}. Use real life image."
     response = openai.Image.create(
     prompt=prompt,
     n=1,

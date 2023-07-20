@@ -1,0 +1,217 @@
+{"Data":
+    [
+
+        {
+
+            "charity_name": "Paws of Love",
+
+            "charity_cause": "Animal Shelters",
+
+            "stories": [
+
+            {
+
+            "story": "A heartwarming tale unfolded when Paws of Love rescued an abandoned litter of kittens. With the help of dedicated volunteers, they provided these tiny furballs with all the care and love they needed. Their adorable photos went viral, prompting a flood of donations. In just two weeks, they raised $3,000, ensuring a bright future for the rescued kittens.",
+
+            "comments": ["I can't resist those cute kittens!", "Keep up the excellent work, Paws of Love!"],
+
+            "number_of_images_used": 3,
+
+            "tone": "heartwarming",
+
+            "goal_completion_period": 30,
+
+            "fund_raised": 3000,
+
+            "goal_amount": 2000,
+
+            "goal_completed_in": 14
+
+            },
+
+            {
+
+            "story": "Paws of Love organized an 'Adopt-a-Thon' where they waived adoption fees for one weekend. The event drew numerous families, and they successfully found loving homes for many animals. The initiative not only raised awareness but also brought in $5,000 in donations, helping the shelter care for more rescue pets.",
+
+            "comments": ["I adopted my best friend during the Adopt-a-Thon!", "Events like these save lives."],
+
+            "number_of_images_used": 2,
+
+            "tone": "grateful",
+
+            "goal_completion_period": 60,
+
+            "fund_raised": 5000,
+
+            "goal_amount": 3000,
+
+            "goal_completed_in": 21
+
+            },
+
+            {
+
+            "story": "Paws of Love launched a unique 'Pet Photo Contest' where proud pet owners submitted adorable pictures of their furry companions. The competition was fierce, and the community's participation resulted in $2,000 raised within a month. The funds went towards medical treatments for injured and sick animals in their care.",
+
+            "comments": ["I can't resist those cute pet photos!", "This contest brought a smile to my face."],
+
+            "number_of_images_used": 3,
+
+            "tone": "joyful",
+
+            "goal_completion_period": 30,
+
+            "fund_raised": 2000,
+
+            "goal_amount": 1500,
+
+            "goal_completed_in": 20
+
+            },
+
+            {
+
+            "story": "Paws of Love organized a 'Paws and Paint' event where artists and animal lovers gathered to create pet-themed artworks. The event was a hit, attracting hundreds of participants and art enthusiasts. With each painting sold, they raised funds for shelter renovations, ultimately reaching $8,000, providing a safe and comfortable space for rescue animals.",
+
+            "comments": ["Such a fun way to support animal shelters!", "I bought a painting and plan to adopt a pet soon."],
+
+            "number_of_images_used": 4,
+
+            "tone": "joyful",
+
+            "goal_completion_period": 60,
+
+            "fund_raised": 8000,
+
+            "goal_amount": 6000,
+
+            "goal_completed_in": 21
+
+            },
+
+            {
+
+            "story": "Paws of Love embarked on a heartwarming campaign to find forever homes for senior pets. They shared the touching stories of older dogs and cats, emphasizing the joy of adopting them. The campaign gained traction, and in just 15 days, they raised $4,000, ensuring that these golden-aged animals spend their twilight years surrounded by love.",
+
+            "comments": ["Senior pets deserve all the love!", "Adopt, don't shop! Let's support rescue organizations."],
+
+            "number_of_images_used": 2,
+
+            "tone": "heartwarming",
+
+            "goal_completion_period": 45,
+
+            "fund_raised": 4000,
+
+            "goal_amount": 3000,
+
+            "goal_completed_in": 12
+
+            },
+
+            {
+
+            "story": "Paws of Love collaborated with a local school to organize a 'Paws for Kids' day. Children spent time with therapy animals, learning about responsible pet ownership and animal welfare. The event was a hit, and the school community donated $3,000, supporting Paws of Love's educational outreach and rescue efforts.",
+
+            "comments": ["What a fantastic way to teach kids compassion!", "Therapy animals have a magical effect."],
+
+            "number_of_images_used": 2,
+
+            "tone": "grateful",
+
+            "goal_completion_period": 30,
+
+            "fund_raised": 3000,
+
+            "goal_amount": 2000,
+
+            "goal_completed_in": 25
+
+            },
+
+            {
+
+            "story": "Paws of Love hosted an intergenerational picnic where children from local schools spent quality time with the elderly. The bond between generations was heartwarming, and the picnic raised $2,500, creating a sense of unity and support within the community.",
+
+            "comments": ["The young and old brought smiles to each other's faces!", "What a beautiful way to foster connections."],
+
+            "number_of_images_used": 2,
+
+            "tone": "heartwarming",
+
+            "goal_completion_period": 30,
+
+            "fund_raised": 2500,
+
+            "goal_amount": 2000,
+
+            "goal_completed_in": 25
+
+            },
+
+
+
+
+            {
+
+            "story": "Emma, a brave little puppy, was found injured on the streets. Wagging Tails Rescue provided her with urgent medical care and a loving foster home. Emma's resilience and adorable charm captured the hearts of many, leading to a successful fundraiser. Within 15 days, they raised $6,000, securing her a forever home and ensuring that more animals like Emma receive a second chance at life.",
+
+            "comments": ["Emma's story touched my heart.", "Rescue organizations are doing incredible work!"],
+
+            "number_of_images_used": 3,
+
+            "tone": "heartwarming",
+
+            "goal_completion_period": 30,
+
+            "fund_raised": 6000,
+
+            "goal_amount": 5000,
+
+            "goal_completed_in": 15
+
+            },
+
+            {
+
+            "story": "Wagging Tails Rescue organized a 'Paws and Play' event in the local park. Pet owners and their furry companions enjoyed a fun-filled day with games, treats, and bonding. The event's success attracted generous donations from the community, raising $10,000 in just two weeks, allowing the shelter to continue their mission of finding forever homes for all animals in need.",
+
+            "comments": ["Such a joyful event for a great cause!", "I can't wait for the next 'Paws and Play.'"],
+
+            "number_of_images_used": 4,
+
+            "tone": "joyful",
+
+            "goal_completion_period": 14,
+
+            "fund_raised": 10000,
+
+            "goal_amount": 8000,
+
+            "goal_completed_in": 10
+
+            },
+
+            {
+
+            "story": "With their kennels overflowing, Wagging Tails Rescue urgently needed additional space to care for more animals. They launched a 'Build for Love' campaign to construct a new shelter. The community rallied behind their cause, and within 60 days, they raised $100,000. The new facility provided comfort and hope to countless animals in need.",
+
+            "comments": ["A new shelter means more lives saved!", "I'm proud to be a part of this campaign."],
+
+            "number_of_images_used": 5,
+
+            "tone": "inspiring",
+
+            "goal_completion_period": 90,
+
+            "fund_raised": 100000,
+
+            "goal_amount": 80000,
+
+            "goal_completed_in": 60
+
+            }
+
+        ]}
+
+    ]}

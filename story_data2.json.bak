@@ -1,0 +1,214 @@
+{"Data":
+[
+
+    {
+
+            "charity_name": "Empower Entrepreneurs",
+
+            "charity_cause": "Business Funding",
+
+            "stories": [
+
+            {
+
+            "story": "Empower Entrepreneurs launched a crowdfunding campaign for a young chef's dream restaurant. The community rallied behind her passion for culinary art, raising $10,000 in just 15 days. The chef's dream came true, and her restaurant has become a local favorite.",
+
+            "comments": ["Supporting local talent feels fantastic!", "I can't wait to try her dishes."],
+
+            "number_of_images_used": 3,
+
+            "tone": "supportive",
+
+            "goal_completion_period": 30,
+
+            "fund_raised": 10000,
+
+            "goal_amount": 8000,
+
+            "goal_completed_in": 15
+
+            },
+
+            {
+
+            "story": "Empower Entrepreneurs organized a 'Pitch Perfect' competition, where start-ups pitched their business ideas to a panel of investors. The event generated excitement, raising $25,000 in funds. Several entrepreneurs received funding to turn their ideas into reality.",
+
+            "comments": ["I love seeing entrepreneurship in action!", "I hope they become successful businesses."],
+
+            "number_of_images_used": 2,
+
+            "tone": "exciting",
+
+            "goal_completion_period": 45,
+
+            "fund_raised": 25000,
+
+            "goal_amount": 20000,
+
+            "goal_completed_in": 40
+
+            },
+
+            {
+
+            "story": "Empower Entrepreneurs supported a tech start-up that aimed to tackle environmental challenges. Their campaign for eco-friendly innovations struck a chord with the public, raising $50,000. The funds accelerated the development of sustainable solutions and garnered widespread attention.",
+
+            "comments": ["Innovation for a better planet is the need of the hour!", "I'm excited to see their progress."],
+
+            "number_of_images_used": 2,
+
+            "tone": "hopeful",
+
+            "goal_completion_period": 60,
+
+            "fund_raised": 50000,
+
+            "goal_amount": 40000,
+
+            "goal_completed_in": 55
+
+            },
+
+            {
+
+            "story": "Empower Entrepreneurs organized an 'Elevate Women Leaders' conference, highlighting female entrepreneurs' contributions. The event raised $15,000, which will fund scholarships and mentorship programs for aspiring businesswomen.",
+
+            "comments": ["Empowering women in business is essential!", "I'm inspired by these powerful women."],
+
+            "number_of_images_used": 2,
+
+            "tone": "empowering",
+
+            "goal_completion_period": 30,
+
+            "fund_raised": 15000,
+
+            "goal_amount": 10000,
+
+            "goal_completed_in": 25
+
+            },
+
+            {
+
+            "story": "Empower Entrepreneurs partnered with a local incubator to provide resources for start-ups. The campaign raised $20,000, supporting workshops, networking events, and access to expert advice, nurturing the growth of innovative ventures.",
+
+            "comments": ["Incubators play a vital role in fostering innovation!", "I wish I had such resources when I started my business."],
+
+            "number_of_images_used": 1,
+
+            "tone": "supportive",
+
+            "goal_completion_period": 30,
+
+            "fund_raised": 20000,
+
+            "goal_amount": 15000,
+
+            "goal_completed_in": 35
+
+            },
+
+            {
+
+            "story": "Empower Entrepreneurs sponsored a 'Young Visionaries' contest, encouraging high school students to showcase their entrepreneurial talents. The inspiring ideas presented impressed the judges, and the event raised $8,000, nurturing the next generation of business leaders.",
+
+            "comments": ["Young minds are our future!", "I'm excited to see what they achieve."],
+
+            "number_of_images_used": 3,
+
+            "tone": "inspiring",
+
+            "goal_completion_period": 45,
+
+            "fund_raised": 8000,
+
+            "goal_amount": 6000,
+
+            "goal_completed_in": 40
+
+            },
+
+            {
+
+            "story": "Empower Entrepreneurs supported a social enterprise aiming to uplift underprivileged communities. The campaign raised $30,000, enabling the enterprise to expand its impact and create positive change.",
+
+            "comments": ["Social enterprises are a force for good!", "I'm happy to contribute to this cause."],
+
+            "number_of_images_used": 2,
+
+            "tone": "hopeful",
+
+            "goal_completion_period": 60,
+
+            "fund_raised": 30000,
+
+            "goal_amount": 25000,
+
+            "goal_completed_in": 50
+
+            },
+
+            {
+
+            "story": "Empower Entrepreneurs organized a 'Business Bootcamp' to equip aspiring entrepreneurs with essential skills. The program raised $10,000, providing participants with valuable knowledge to kickstart their ventures.",
+
+            "comments": ["Knowledge is the key to success in business!", "I'm grateful for initiatives like this."],
+
+            "number_of_images_used": 1,
+
+            "tone": "educational",
+
+            "goal_completion_period": 30,
+
+            "fund_raised": 10000,
+
+            "goal_amount": 8000,
+
+            "goal_completed_in": 28
+
+            },
+
+            {
+
+            "story": "Empower Entrepreneurs collaborated with a venture capitalist to offer funding to start-ups with groundbreaking ideas. The joint effort raised $100,000, supporting innovation and paving the way for groundbreaking products and services.",
+
+            "comments": ["Investing in innovation drives progress!", "These start-ups will change the world."],
+
+            "number_of_images_used": 3,
+
+            "tone": "pioneering",
+
+            "goal_completion_period": 90,
+
+            "fund_raised": 100000,
+
+            "goal_amount": 80000,
+
+            "goal_completed_in": 80
+
+            },
+
+            {
+
+            "story": "Empower Entrepreneurs partnered with a philanthropic organization to fund projects that address social and environmental challenges. The campaign raised $50,000, demonstrating the power of business in driving positive change.",
+
+            "comments": ["Businesses can make a difference in the world!", "I'm proud to support this initiative."],
+
+            "number_of_images_used": 2,
+
+            "tone": "impactful",
+
+            "goal_completion_period": 60,
+
+            "fund_raised": 50000,
+
+            "goal_amount": 40000,
+
+            "goal_completed_in": 50
+
+          }
+
+          ]}
+  
+      ]}
