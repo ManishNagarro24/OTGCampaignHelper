@@ -5,13 +5,14 @@ export default function Activity() {
   return (
     <div style={{
       position: 'relative',
-      backgroundImage: './Images/Background2.png',
+      backgroundImage: './Images/background3.png',
       width: '100%',
-      height: '100vh'
-      ,fontStyle:"courier"
+      height: '100vh',
+      fontStyle:"courier",
+      marginLeft:"-130px"
       
     }}>
-      <img src="./Images/Background2.png">
+      <img src="./Images/background3.png">
       </img>
       <PopupComponent/> 
     </div>

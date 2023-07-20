@@ -13,7 +13,7 @@ import StoryCreator from './components/StoryCreator';
 function App() {
   return (
     <div>
-    <Header></Header>
+   
     <div>
       <BrowserRouter> 
         <Routes> 
@@ -26,7 +26,7 @@ function App() {
         </Routes>    
       </BrowserRouter> 
       </div>
-    <Footer></Footer> 
+   
     </div>
   
   );

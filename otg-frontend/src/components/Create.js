@@ -2,7 +2,8 @@ import React,{ useState,useRef} from 'react';
 import { MDBListGroup,MDBInput,MDBBtn} from 'mdb-react-ui-kit';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { useNavigate } from 'react-router-dom';
-
+import Header from './Header';
+import Footer from './Footer';
 export var selectedOption=""
 export var causeDescription=""
 var setSelectedOption=""
@@ -18,6 +19,7 @@ export const Memory = () => {
 
   return (
     <>
+    <Header></Header>
     <img src="./Images/getstarted.png" alt="" height="180" width="100%"></img>
       <div id="Page1" className="d-flex p-2 justify-content-center" style={{marginTop:"100px",display:"flex"}}>   
       <MDBListGroup id = "Page1" style={{paddingTop:"-100px",marginTop:"-80px"}} light >
@@ -40,6 +42,7 @@ export const Memory = () => {
       will go direct to the charity.</p> 
     </MDBListGroup>
     </div>
+    <Footer></Footer>
     </>
   )
 }
