@@ -259,32 +259,33 @@ const PopupComponent = () => {
 
 
 
-
-                              <div className="ZkMN-">
-
-
-
-
-                                <div >
+                            <div className="ZkMN-">
 
 
 
 
-                                <div style={{ height: '333px', width: '592px', textAlign: 'center' }}>
-
-                                {imageUrl && <img src={imageUrl} alt="Generated Image" style={{ maxHeight: '50%', maxWidth: '50%', marginLeft: "auto", marginRight: "auto", marginTop: "auto", marginBottom: "auto" }} />}
-
-                                </div>
+<div alignContent="center">
 
 
 
 
-                                </div>
+ <div style={{ height: '333px', width: '592px', textAlign: 'center'}}>
+
+{imageUrl && <img src={imageUrl} alt="Generated Image" style={{ maxHeight: '70%', maxWidth: '50%', marginLeft: "auto", marginRight: "140px", marginTop: "-3px", marginBottom: "auto",
+
+alignSelf:"center" }} />}
+
+ </div>
 
 
 
 
-                              </div>
+</div>
+
+
+
+
+</div>
 
                             {/*  <div style={{height:"230px"}}>
 
