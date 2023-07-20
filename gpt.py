@@ -1,6 +1,6 @@
 import openai
 import json
-openai.api_key = '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'
+openai.api_key = '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'
 def call_gpt(cause,suggestions):
     prompt=f"Your role is to create a fundraiser story for getting donation {cause} cause and these suggestions {suggestions}.Create a fundraising story"
     response = openai.Completion.create(
