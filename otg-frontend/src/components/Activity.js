@@ -335,13 +335,6 @@ alignSelf:"center" }} />}
 
                               </div> */}
 
-                              <p className="jg-text--light jg-space-phsm jg-space-mn" style={{fontSize:"10px",marginTop:"-60px"}}>
-
-                                For best results, your photo should be at least 700px wide and
-
-                                landscape format
-
-                              </p>
 
                             </div>
 

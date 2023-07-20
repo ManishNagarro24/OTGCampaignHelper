@@ -6,12 +6,17 @@ CORS(app)
 
 @app.route('/generatecontent', methods=['POST'])
 def generate_content():
-    # Logic to generate content
-    # ...
-    
+    if request.method == 'OPTIONS':
+        # Handle preflight request
+        response = app.make_default_options_response()
+    else:
+        cause = request.json['cause']
+        suggestions = request.json['suggestions']
+        content=gpt.call_gpt(cause,suggestions)
 
-    # Return the generated content
-    return jsonify({'message': 'Content generated successfully'})
+        # Return the image URL as JSON response
+        response = jsonify({'content': content})
+    return response
 
 @app.route('/regeneratecontent', methods=['POST'])
 def regenerate_content():

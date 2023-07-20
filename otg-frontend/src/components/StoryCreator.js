@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { selectedOption } from './Create';
 
 export default function Activity() {
   return (
@@ -29,6 +30,55 @@ const PopupComponent = () => {
         // Handle generate button click logic here
         console.log('Generated:', inputValue);
       };
+      var [content, setContent] = useState('');
+
+  const handleGenerate = () => {
+
+    var data = {
+
+      "cause":"Cause: "+selectedOption,
+      "suggestions":"Suggestions: "+"Highlight the success of this story to motivate people to donate more Try to add phrases like: Keep up the excellent work, Paws of Love!"
+
+    };
+
+
+
+
+    fetch('http://127.0.0.1:5000/generatecontent', {
+
+      method: 'POST',
+
+      headers: {
+
+        'Content-Type': 'application/json',
+
+      },
+
+      body: JSON.stringify(data),
+
+    })
+
+      .then(response => response.json())
+
+      .then(responseData => {
+
+        content=responseData['content']
+
+        setContent(content)
+
+        // Handle the API response
+
+      })
+
+      .catch(error => {
+
+        // Handle any errors
+
+        alert(error)
+
+      });
+
+  };
   const popupContainerStyle = {
     position: 'fixed',
     top: '0',
@@ -88,19 +138,19 @@ const PopupComponent = () => {
         </p>
         <a type="link" class="c-EQc jg-space-mbsm jg-text--link jg-text--center" style={{marginLeft:"70px",textDecoration:"none",textAlign:"center",fontStyle:"courier"}}><span><p style={{fontSize:"13px",marginTop:"-29px",fontStyle:"courier"}}>Learn more about writing a compelling story</p></span> </a></header><div class="_2JA5v"><div class="jg-space-pbml" style={{fontStyle:"courier"}}><form><div class={{}}><div class="jg-form-group">
           <hr></hr>
-      <div class="jg-form-group"><div class="jg-space-psm jg-space-pmd@md jg-relative jg-bd jg-bd--solid jg-bd--very-light-grey" >
+      <div style={{overflowY:"scroll",height:"300px"}}class="jg-form-group"><div class="jg-space-psm jg-space-pmd@md jg-relative jg-bd jg-bd--solid jg-bd--very-light-grey" >
         <div data-slate-editor="true" data-key="8" contenteditable="true" class="tP1Ms" spellcheck="true" role="textbox" data-gramm="false" autocomplete="off" autocorrect="off" style={{marginTop:"10px",fontStyle:"courier"}}>
           <p class="jg-text" data-key="7">
             <span data-key="6">
-              <span data-offset-key="6-0" style={{fontStyle:"courier"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>
+              <span data-offset-key="6-0" style={{fontStyle:"courier"}}>{content}</span>
         </span>
         
         </p></div><div class="_3ieR6 jg-space-mtmd jg-space-mlmd@lg jg-space-ptxs jg-text--large">
 
         <img alt="" src="./Images/tools_enhance.png" height="50px" width ="340px" style={{zIndex:"1",position:"relative",marginBottom:"-40px"}}></img>
 
-        <button type="button" style={{marginTop:"-130px",zIndex:"-1",marginLeft:"350px",backgroundColor:"#af96d7",borderRadius:"4px",border:"none",color:"white",fontStyle:"courier",fontSize:"13px"}}>
-                        Re-Generate
+        <button onClick={handleGenerate} type="button" style={{marginTop:"-130px",zIndex:"-1",marginLeft:"350px",backgroundColor:"#af96d7",borderRadius:"4px",border:"none",color:"white",fontStyle:"courier",fontSize:"13px"}}>
+                        Generate story using AI
                       </button>
 <hr></hr>
      </div></div>
