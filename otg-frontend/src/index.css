@@ -48,9 +48,10 @@ code {
   justify-content: center;
 }
 
-.dropdown-toggle::after {
+#dropdown-toggle::after {
   position: absolute;
   right: 0%;
   margin-right: 16px;
   margin-top: 9px;
 }
+

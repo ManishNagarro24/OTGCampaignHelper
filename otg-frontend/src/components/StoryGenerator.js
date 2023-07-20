@@ -1,7 +1,11 @@
-import { auto } from '@popperjs/core';
-import { MDBListGroup, MDBListGroupItem, MDBRipple} from 'mdb-react-ui-kit';
-import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import Dropdown from 'react-bootstrap/Dropdown';
+import React ,{ useState,useRef} from 'react';
+import { MDBListGroup,MDBInput,MDBBtn} from 'mdb-react-ui-kit';
+export var selectedOption=""
+export var causeDescription=""
+var setSelectedOption=""
+var setCauseDescription=""
 
 export default function Activity() {
   return (
@@ -30,6 +34,11 @@ const PopupComponent = () => {
       const handleGenerateClick = () => {
         // Handle generate button click logic here
         console.log('Generated:', inputValue);
+      };     
+    
+      [selectedOption, setSelectedOption] = useState('Language');
+      const handleOptionSelect = (eventKey) => {
+        setSelectedOption(eventKey);
       };
   const popupContainerStyle = {
     position: 'fixed',
@@ -110,10 +119,21 @@ const PopupComponent = () => {
               style={{ flex: '1', padding: '2px' ,borderColor:"lightGray",borderRadius:"6px",fontStyle:"courier"}}
             />
           </div>
-          <button onClick={handleGenerateClick} style={{borderColor:"lightGray" ,backgroundColor:"#af96d7",borderRadius:"9px",marginLeft:"300px",fontStyle:"courier"}} class="btn btn-secondary">Generate using AI</button>
+          <Dropdown onSelect={handleOptionSelect}>
+        <Dropdown.Toggle id="dropdown-toggle2" style={{ width: "100px", overflow: "auto", backgroundColor: "white", color: "white", textAlign: "left", borderColor: "lightgrey" ,marginTop:"7px",borderRadius:"9px",backgroundColor:"#af96d7",fontStyle:"courier",marginLeft:"10px"}}>
+          {selectedOption}
+        </Dropdown.Toggle>
+        <Dropdown.Menu style={{ maxHeight: "200px", overflowY: "auto" ,width:"80px",fontStyle:"courier"}}>
+          <Dropdown.Item eventKey="Spanish">Spanish</Dropdown.Item>
+          <Dropdown.Item eventKey="French">French</Dropdown.Item>
+          <Dropdown.Item eventKey="Arabic">Arabic</Dropdown.Item>          
+        </Dropdown.Menu>
+      </Dropdown>
+          <button onClick={handleGenerateClick} style={{borderColor:"lightGray" ,backgroundColor:"#af96d7",borderRadius:"9px",marginLeft:"300px",fontStyle:"courier",marginTop:"-65px"}} class="btn btn-secondary">Generate using AI</button>
+         
         </section>
       </div>
-      <footer className="_3oHBN" style={{textAlign:"center",marginTop:"20px",fontStyle:"courier"}}>
+      <footer className="_3oHBN" style={{textAlign:"center",marginTop:"-5px",fontStyle:"courier"}}>
         <button className="jg-btn _1jNyc" style={closeButtonStyle}>Save and continue</button>
         <p className="jg-space-mtmd jg-color--empress jg-text--light" style={{fontSize:"12px",fontStyle:"courier",color:"gray"}}>
           You can edit this later
@@ -209,7 +229,7 @@ const SectionComponent = () => {
 
   const ButtonWithSymbol = () => {
     const navigate = useNavigate();
-
+   
     const handleNext = () => {
         navigate('/6'); // Navigate to the "/3" route
     };
