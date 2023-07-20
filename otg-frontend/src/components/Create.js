@@ -60,11 +60,11 @@ export const MyComponent = () => {
   return (
     <div className="Category" style={{ marginTop: "20px" }}>
       <h6>Category</h6>
-      <Dropdown onSelect={handleOptionSelect}>
+      <Dropdown onSelect={handleOptionSelect} >
         <Dropdown.Toggle id="dropdown-toggle" style={{ width: "500px", overflow: "auto", backgroundColor: "white", color: "grey", textAlign: "left", borderColor: "lightgrey" }}>
           {selectedOption}
         </Dropdown.Toggle>
-        <Dropdown.Menu style={{ maxHeight: "200px", overflowY: "auto" }}>
+        <Dropdown.Menu style={{ maxHeight: "200px", overflowY: "auto" ,width:"500px"}}>
           <Dropdown.Item eventKey="Animals shelter">Animals shelter</Dropdown.Item>
           <Dropdown.Item eventKey="Business Funding">Business Funding</Dropdown.Item>
           <Dropdown.Item eventKey="Creative arts and culture">Creative arts and culture</Dropdown.Item>
