@@ -126,7 +126,8 @@ const PopupComponent = () => {
         <Dropdown.Menu style={{ maxHeight: "200px", overflowY: "auto" ,width:"80px",fontStyle:"courier"}}>
           <Dropdown.Item eventKey="Spanish">Spanish</Dropdown.Item>
           <Dropdown.Item eventKey="French">French</Dropdown.Item>
-          <Dropdown.Item eventKey="Arabic">Arabic</Dropdown.Item>          
+          <Dropdown.Item eventKey="Arabic">Arabic</Dropdown.Item>
+          <Dropdown.Item eventKey="English">English</Dropdown.Item>                    
         </Dropdown.Menu>
       </Dropdown>
           <button onClick={handleGenerateClick} style={{borderColor:"lightGray" ,backgroundColor:"#af96d7",borderRadius:"9px",marginLeft:"300px",fontStyle:"courier",marginTop:"-65px"}} class="btn btn-secondary">Generate using AI</button>
